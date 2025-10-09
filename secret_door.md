@@ -94,11 +94,12 @@ Running the script yields:
 ```
 🚩 Flag Obtained: **{1t_is_very_light_b0x}**
 
-## Pwned
+## 🤯 Pwned
 
 **Author:** Brian Araneta 
 
 **Date:** October 8th, 2025  
+
 
 
 

@@ -1,15 +1,15 @@
-# ?? CTF Challenge � Secret Box
-?? Challenge Files
+# 🧩 CTF Challenge — Secret Box
+📁 Challenge Files
 
 - secret.png
 
 - secretbox.py
 
-## ?????? Description
+## 🕵️‍♂️ Description
 
 We are provided with a Python script and an image file. The task is to extract the hidden flag from the image.
 
-## ?? Step 1 � Inspect the Python script
+## 🧠 Step 1 — Inspect the Python script
 
 Looking at secretbox.py:
 
@@ -38,7 +38,7 @@ We can tell it encodes a message into the alpha channel (p[c, 0][3]) of an image
 
 The key used for the XOR is the length of the output filename (len(d_img)).
 
-## ?? Step 2 � Understanding the Encoding
+## 🧩 Step 2 — Understanding the Encoding
 
 The line:
 ```py
@@ -48,13 +48,13 @@ reveals two things:
 
 - The message is reversed before encoding.
 
-- Each character�s ASCII value is XOR�ed with the length of the output file name.
+- Each character’s ASCII value is XOR’ed with the length of the output file name.
 
 Since the provided image is called secret.png,
 len("secret.png") = 10,
 so the XOR key = 10.
 
-## ?? Step 3 � Writing the Decoder
+## 🧰 Step 3 — Writing the Decoder
 
 To reverse the process, we can extract the alpha channel, XOR each byte with 10, and reverse the result:
 ```py
@@ -74,4 +74,5 @@ def decode(img_path):
     return ''.join(msg)
 
 print(decode("secret.png"))
+
 ```

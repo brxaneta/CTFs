@@ -87,5 +87,6 @@ Running the script yields:
 ## Pwned
 
 **Author:** Brian Araneta 
+
 **Date:** October 8th, 2025  
-**Tags:** `hackthebox` `active-directory` `bloodhound` `kerberoasting` `dcsync` `password-safe` `windows-pentesting`
+

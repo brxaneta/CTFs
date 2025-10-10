@@ -1,4 +1,4 @@
-# 🧩 CTF Challenge — secret_door
+# 🧩 CTF Challenge - secret_door
 📁 Challenge Files
 
 - secret.png
@@ -99,6 +99,7 @@ Running the script yields:
 **Author:** Brian Araneta 
 
 **Date:** October 8th, 2025  
+
 
 
 

@@ -31,6 +31,7 @@ Subtracting the two addresses:
 
 0x20 bytes equals 32 bytes, meaning that once we write 33 or more characters, the overflow spills into safe_var and overwrites the "bico" value. 
 At that point, the program’s check_win() function succeeds and prints the flag.
+Here, I used 33 'A's to trigger it.
 
 <img width="415" height="251" alt="64cb134e01768952a8d1142b13529e5f" src="https://github.com/user-attachments/assets/791f3fd0-740a-4d4d-850e-ba56fb5c2299" />
 

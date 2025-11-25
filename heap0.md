@@ -18,6 +18,7 @@ The objective of the challenge is to overwrite the contents of safe_var; doing s
 
 ## Figuring it Out
 To figure out the exact number of bytes needed to overwrite safe_var, I used the program’s print heap feature to inspect the memory layout. It displayed the following heap entries:
+
 <img width="175" height="100" alt="6511c78824b767be6e13985101910547" src="https://github.com/user-attachments/assets/e1e35a7f-09ea-44ab-aa4e-2f6a0e5ad3fb" />
 
 Both values are heap addresses in hexadecimal. Calculating the distance between them gives us the offset we need:

@@ -10,11 +10,15 @@
 
 Are overflows just a stack concern?
 
+<img width="420" height="239" alt="2e6ffeb68d6af3a9caf7e7e547c273e6" src="https://github.com/user-attachments/assets/b81fafa4-14dc-4cbd-b5cf-a1e8bfb57485" />
+
 ## Inspect the Source Code
 
 After reviewing the source code, I found that the program places two variables - input_data and safe_var - on the heap. 
 input_data starts with the value "pico", while safe_var is initialized as "bico". 
 The objective of the challenge is to overwrite the contents of safe_var; doing so causes the program to reveal the flag stored in a file.
+
+<img width="377" height="241" alt="b110399269dc2288573e93efd01a2b8b" src="https://github.com/user-attachments/assets/ee634997-2e01-4190-889c-c73ffabeeaa2" />
 
 ## Figuring it Out
 To figure out the exact number of bytes needed to overwrite safe_var, I used the program’s print heap feature to inspect the memory layout. It displayed the following heap entries:

@@ -1,4 +1,6 @@
 # 🧩 CTF Challenge - flag_hunters
+Category: Reverse Engineering
+
 📁 Challenge Resources
 
 - lyric-reader.py

@@ -1,0 +1,27 @@
+# 🧩 CTF Challenge - Picker IV
+Category: Binary Exploitation
+
+📁 Challenge Resources
+
+- picker-iv
+- picker-iv.c
+- PicoCTF Webshell 
+
+
+## 🕵️‍♂️ Description
+
+Our goal is to retrieve the flag. Looking at the binary’s source, it’s clear that the win function is responsible for printing the flag. 
+
+
+The program also prompts the user with:
+“Enter the address in hex to jump to.”
+
+This means that if we can determine the address of win and provide it as input, the binary will jump directly to that function and reveal the flag.
+
+To locate the address of win, we can use gdb. After loading the binary, the info functions command lists all function symbols along with their memory addresses.
+
+## 🤯 Pwned
+
+**Author:** Brian Araneta 
+
+**Date:** November 25th, 2025  

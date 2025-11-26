@@ -75,6 +75,8 @@ String input = userInput.substring("picoCTF{".length(), userInput.length()-1);
 ```
 This strips off "picoCTF{" at the start and the closing } at the end.
 
+So the real password being verified is the string - where our goal is to reconstruct the password that will pass these checks.
+
 ## Analyzing the Password Check
 The core of the binary is the checkPassword() function. It contains a long list of conditions:
 ```java

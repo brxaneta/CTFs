@@ -29,7 +29,7 @@ After loading the binary, the info functions command lists all function symbols 
 
 <img width="198" height="265" alt="ff7dcae099171d8c39015f35b597b5f6" src="https://github.com/user-attachments/assets/98530ef5-beb6-499e-975d-31e6433e1c51" />
 
-And voila! We got the flag!
+The win function is at address 0x40129e. When we pass it to the binary... voila! We got the flag!
 
 <img width="303" height="49" alt="cc19c2905802d9b774d39616a426e379" src="https://github.com/user-attachments/assets/707e8125-a6d0-4afe-a271-7b1ac419de71" />
 

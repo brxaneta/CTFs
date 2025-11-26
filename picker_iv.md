@@ -22,6 +22,9 @@ The program also prompts the user with:
 
 This means that if we can determine the address of win and provide it as input, the binary will jump directly to that function and reveal the flag.
 To locate the address of win, we can use gdb. 
+```gdb
+gdb picker-IV
+```
 After loading the binary, the info functions command lists all function symbols along with their memory addresses.
 
 <img width="198" height="265" alt="ff7dcae099171d8c39015f35b597b5f6" src="https://github.com/user-attachments/assets/98530ef5-beb6-499e-975d-31e6433e1c51" />

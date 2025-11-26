@@ -61,6 +61,8 @@ This places a RETURN 0 token where the reader will parse it as a command, settin
 
 <img width="324" height="263" alt="198a9352b67444fddf20a9c2c2ed7601" src="https://github.com/user-attachments/assets/d22f8c3e-258e-4911-9bca-0a7f43194c73" />
 
+Boom! Flag Acquired: **picoCTF{70637h3r_f0r3v3r_a5202532}**
+
 ## 🤯 Pwned
 
 **Author:** Brian Araneta 

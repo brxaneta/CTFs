@@ -1,4 +1,6 @@
 # 🧩 CTF Challenge - vault_door_training
+Category: Reverse Engineering
+
 📁 Challenge Files
 
 - VaultDoorTraining.java

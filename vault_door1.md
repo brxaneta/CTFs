@@ -69,6 +69,49 @@ class VaultDoor1 {
     }
 }
 ```
+The program expects input following the picoCTF{} format:
+```Java
+String input = userInput.substring("picoCTF{".length(), userInput.length()-1);
+```
+This strips off "picoCTF{" at the start and the closing } at the end.
+
+## Analyzing the Password Check
+The core of the binary is the checkPassword() function. It contains a long list of conditions:
+```java
+password.charAt(0)  == 'd'
+password.charAt(1)  == '3'
+password.charAt(2)  == '5'
+...
+password.charAt(31) == '5'
+```
+This acts like a map of:
+```index -> required character```
+Because the function explicitly defines every character needed, we don't need to manually reorder the characters - we can reconstruct the password using a script.
+
+## Automatically Rebuilding the Password
+To avoid human error and make the process efficient, we can write a short Python script that builds the password from the index rules.
+```python
+password = ['?'] * 32
+
+rules = {
+    0: 'd', 29: '5', 4: 'r', 2: '5', 23: 'r',
+    3: 'c', 17: '4', 1: '3', 7: 'b', 10: '_',
+    5: '4', 9: '3', 11: 't', 15: 'c', 8: 'l',
+    12: 'H', 20: 'c', 14: '_', 6: 'm', 24: '5',
+    18: 'r', 13: '3', 19: '4', 21: 'T', 16: 'H',
+    27: '5', 30: '6', 25: '_', 22: '3', 28: '2',
+    26: 'd', 31: '5'
+}
+
+for index, char in rules.items():
+    password[index] = char
+
+print("".join(password))
+```
+
+And there it is! Flag obtained!
+
+<img width="494" height="33" alt="b76283feddee726a90e008744d2e194e" src="https://github.com/user-attachments/assets/828f62d4-a5ed-4bb2-957b-0c674ac8ce37" />
 
 
 ## 🤯 Pwned

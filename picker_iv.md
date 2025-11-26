@@ -10,7 +10,10 @@ Category: Binary Exploitation
 
 ## 🕵️‍♂️ Description
 
-Our goal is to retrieve the flag. Looking at the binary’s source, it’s clear that the win function is responsible for printing the flag. 
+Can you figure out how this program works to get the flag?
+
+## Inspecting the binary
+Looking at the binary’s source, it’s clear that the win function is responsible for printing the flag. 
 
 <img width="191" height="183" alt="939174cdc58cdaf74e69cc032efa235d" src="https://github.com/user-attachments/assets/e46122b0-6f0f-4f5c-8b0d-386a023da9c0" />
 
@@ -19,7 +22,7 @@ The program also prompts the user with:
 
 <img width="293" height="29" alt="13e7f837533c73de35bec842344b22c3" src="https://github.com/user-attachments/assets/a8e91947-84e9-4482-b2ef-b8fc3b0508f9" />
 
-
+## Time to dig
 This means that if we can determine the address of win and provide it as input, the binary will jump directly to that function and reveal the flag.
 To locate the address of win, we can use gdb. 
 ```gdb

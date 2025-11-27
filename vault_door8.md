@@ -134,11 +134,15 @@ There - nice and readable. Now we can get to examining.
 
 Only the middle portion of the flag is validated:
 
-```String input = ctf.substring(8, ctf.length() - 1);```
+```
+String input = ctf.substring(8, ctf.length() - 1);
+```
 
 So the actual flag is:
 
-```picoCTF{XXXXXXXX<decoded_substring>Z}```
+```
+picoCTF{XXXXXXXX<decoded_substring>Z}
+```
 
 The first 8 chars and last char are ignored, meaning only the substring between them matters.
 

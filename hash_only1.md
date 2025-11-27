@@ -3,16 +3,25 @@ Category: Binary Exploitation
 
 📁 Challenge Resources
 
-- VaultDoor1.java
+- flaghasher (binary)
+- PicoCTF Webshell
 
 ## 🕵️‍♂️ Description
 
 Here is a binary that has enough privilege to read the content of the flag file but will only let you know its hash. 
 If only it could just give you the actual content!
 
-We can connect to a remote server as it was given:
+We can connect to a remote server in the web shell with the given connection:
 
 <img width="406" height="227" alt="a7195fc0a103ef39d42297e03b308229-1" src="https://github.com/user-attachments/assets/aa18ef79-e88b-4fef-a724-c0c096e5fe53" />
+
+## Running the Binary
+Before diving into reverse engineering, I ran the binary within the connected server to observe its behavior:
+
+<img width="252" height="76" alt="88f7564caad54bb3a2543a37b761bb66" src="https://github.com/user-attachments/assets/dc7b76b6-613b-427a-b427-03bcddb90562" />
+
+From the output, we could see that the flag resides at /root/flag.txt, and the binary was computing its MD5 hash.
+Next, I opened the binary in Ghidra to understand its logic.
 
 ## Outstanding Information
 

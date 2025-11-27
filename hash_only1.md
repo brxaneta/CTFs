@@ -27,7 +27,9 @@ Next, I opened the binary in Ghidra to understand its logic.
 
 A key string stood out:
 
-<img width="377" height="341" alt="be4ea5a3604f374e4e360eeec0b1e57a" src="https://github.com/user-attachments/assets/37506a46-1feb-446b-90e8-b8322b60eab9" />
+<img width="381" height="342" alt="6642f18001ca0f77f37565e7f7efe808" src="https://github.com/user-attachments/assets/a7628272-8e6e-4934-abb3-2b575fa9a23a" />
+
+```/bin/bash -c 'md5sum /root/flag.txt'```
 
 Since the binary relies on md5sum, I realized we could exploit this by manipulating the PATH. 
 By creating a custom md5sum binary (simply a copy of cat) in a directory we control and renaming it to md5sum, we can override the system command. 

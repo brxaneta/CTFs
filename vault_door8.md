@@ -133,9 +133,13 @@ System.out.println("bit2 " + Integer.toBinaryString(bit2)); */
 There - nice and readable. Now we can get to examining.
 
 Only the middle portion of the flag is validated:
+
 ```String input = ctf.substring(8, ctf.length() - 1);```
+
 So the actual flag is:
+
 ```picoCTF{XXXXXXXX<decoded_substring>Z}```
+
 The first 8 chars and last char are ignored, meaning only the substring between them matters.
 
 ## Understanding the Scramble Function
@@ -195,6 +199,7 @@ print("Recovered password:", password)
 ```
 ## Result
 Running the script produces:
+
 ```s0m3_m0r3_b1t_sh1fTiNg_785c5c77d```
 
 BOOM! Flag found!
